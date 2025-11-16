@@ -1,0 +1,735 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|c:\\users\\tung dinh\\onedrive\\documents\\visual studio 2022\\24dh112073_mystore\\24dh112073_mystore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|c:\\users\\tung dinh\\onedrive\\documents\\visual studio 2022\\24dh112073_mystore\\24dh112073_mystore\\models\\viewmodel\\personalmenuvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\personalmenuvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|c:\\users\\tung dinh\\onedrive\\documents\\visual studio 2022\\24dh112073_mystore\\24dh112073_mystore\\models\\mystoremodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\mystoremodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\mystoremodel.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\mystoremodel.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\shared\\_pvrelatedproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\shared\\_pvrelatedproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\shared\\_pvtopproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\shared\\_pvtopproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\content\\mystyle\\customerhome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\content\\mystyle\\customerhome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\home\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\home\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\productdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\productdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\homeproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\homeproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\shared\\_pvnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\shared\\_pvnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\views\\shared\\_pvfeatureproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\views\\shared\\_pvfeatureproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\pvlistproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\pvlistproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\productsearchvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\productsearchvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\categories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\categories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\categories\\pvcreateeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\categories\\pvcreateeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\models\\mystoremodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\models\\mystoremodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\pvcreateeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\pvcreateeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\pvproductinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\pvproductinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24dh112073_mystore\\areas\\admin\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4450276C-0765-47D5-A146-643B23D0ADCA}|24DH112073_MyStore\\24DH112073_MyStore.csproj|solutionrelative:24dh112073_mystore\\areas\\admin\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:14:54.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T15:51:56.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T15:32:53.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T15:52:24.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAkwGIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:40:14.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:34:27.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\CartController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:39:07.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:36:25.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:54:19.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonalMenuVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\PersonalMenuVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\PersonalMenuVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\PersonalMenuVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\PersonalMenuVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T18:18:06.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAqwI4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T18:18:57.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MyStoreModel.Context.tt",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.Context.tt",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\MyStoreModel.Context.tt",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.Context.tt",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\MyStoreModel.Context.tt",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-16T16:17:22.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomerHome.css",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Content\\myStyle\\CustomerHome.css",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Content\\myStyle\\CustomerHome.css",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Content\\myStyle\\CustomerHome.css",
+              "RelativeToolTip": "24DH112073_MyStore\\Content\\myStyle\\CustomerHome.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-16T17:19:05.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_PVRelatedProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVRelatedProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Shared\\_PVRelatedProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVRelatedProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Shared\\_PVRelatedProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:22:37.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Home\\ProductDetails.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Home\\ProductDetails.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Home\\ProductDetails.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Home\\ProductDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:21:48.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MyStoreModel.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.edmx",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\MyStoreModel.edmx",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.edmx [Diagram1]",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\MyStoreModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-11-16T17:31:41.886Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_PVTopProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVTopProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Shared\\_PVTopProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVTopProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Shared\\_PVTopProduct.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:23:00.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\RegisterVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\RegisterVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\RegisterVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\RegisterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:35:18.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_PVFeatureProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVFeatureProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Shared\\_PVFeatureProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVFeatureProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Shared\\_PVFeatureProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:15:57.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_PVNewProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVNewProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Views\\Shared\\_PVNewProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Views\\Shared\\_PVNewProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Views\\Shared\\_PVNewProduct.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T17:17:05.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeProductVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\HomeProductVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\HomeProductVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\HomeProductVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\HomeProductVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:32:34.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductDetailsVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\ProductDetailsVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:34:03.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PVListProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwDwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:57:21.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:44:47.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T17:07:20.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Index.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Index.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:45:07.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductSearchVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\ProductSearchVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\ProductSearchVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\ProductSearchVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\ProductSearchVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T10:13:36.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Delete.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Delete.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:47:35.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Edit.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:47:07.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Create.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Create.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:46:41.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PVCreateEditCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\PVCreateEditCategory.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\PVCreateEditCategory.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\PVCreateEditCategory.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Categories\\PVCreateEditCategory.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:46:02.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Web.config",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Web.config",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Web.config",
+              "RelativeToolTip": "24DH112073_MyStore\\Web.config",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-16T16:42:06.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:44:51.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CheckoutVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CheckoutVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\CheckoutVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CheckoutVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\CheckoutVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:39:33.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CartService.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\CartService.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CartService.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:38:33.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\Cart.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\Cart.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\Cart.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\Cart.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAYwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:38:04.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CartItem.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\CartItem.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\CartItem.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:37:22.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\LoginVM.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\ViewModel\\LoginVM.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\ViewModel\\LoginVM.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\ViewModel\\LoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:35:49.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MyStoreModel.Context.cs",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.Context.cs",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Models\\MyStoreModel.Context.cs",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Models\\MyStoreModel.Context.cs",
+              "RelativeToolTip": "24DH112073_MyStore\\Models\\MyStoreModel.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:17:26.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PVCreateEditProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVCreateEditProduct.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVCreateEditProduct.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVCreateEditProduct.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVCreateEditProduct.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T08:54:46.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PVProductInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVProductInfo.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVProductInfo.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVProductInfo.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\PVProductInfo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T08:08:21.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Details.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T08:12:13.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Create.cshtml",
+              "RelativeDocumentMoniker": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Create.cshtml",
+              "ToolTip": "C:\\Users\\TUNG DINH\\OneDrive\\Documents\\Visual Studio 2022\\24DH112073_MyStore\\24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Create.cshtml",
+              "RelativeToolTip": "24DH112073_MyStore\\Areas\\Admin\\Views\\Products\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T16:39:21.39Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

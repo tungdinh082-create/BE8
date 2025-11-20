@@ -1,0 +1,42 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.ProductDetailsVM
+@using PagedList.Mvc
+
+@* Link CSS (nếu cần) *@
+<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
+
+@if (Model.TopProducts != null && Model.TopProducts.Any())
+{
+    <section class="container-fluid listProduct">
+        <h4 style="font-weight:bold;">Sản phẩm bán chạy</h4>
+        <ul class="list-container" style="grid-template-columns: 1fr;">
+            @* Hiển thị 1 cột *@
+            @foreach (var product in Model.TopProducts)
+            {
+                <li class="lproduct-item" style="height: auto; border: none; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;">
+
+                    @* 1. Ảnh sản phẩm: Dùng Url.Content để hiển thị đúng *@
+                    <div>
+                        <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                            <img src="@Url.Content(product.ProductImage)" style="width: 100%; height: 150px; object-fit: contain;" />
+                        </a>
+                    </div>
+
+                    @* 2. Thông tin sản phẩm *@
+                    <div style="padding: 5px;">
+                        <p class="prodName" style="font-size: 16px;">@product.ProductName</p>
+
+                        @* 3. SỬA LỖI GIÁ TIỀN TẠI ĐÂY *@
+                        <p class="prodPrice" style="color: blue; font-weight: bold; font-size: 18px;">
+                            @product.ProductPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫
+                        </p>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <div class="pagination-container">
+            @* 4. Phân trang: Đảm bảo Action là ProductDetails (có s) *@
+            @Html.PagedListPager(Model.TopProducts, page => Url.Action("ProductDetails", new { id = Model.Product.ProductID, quantity = Model.Quantity, page = page }))
+        </div>
+    </section>
+}

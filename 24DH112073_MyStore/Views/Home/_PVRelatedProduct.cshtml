@@ -1,0 +1,34 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.ProductDetailsVM
+@using PagedList.Mvc
+
+@* Link CSS *@
+<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
+
+@if (Model.RelatedProducts != null && Model.RelatedProducts.Any())
+{
+    <section class="container-fluid featureProd">
+        <h4 style="font-weight:bold;">Sản phẩm tương tự</h4>
+        <div class="feature-container">
+            @foreach (var product in Model.RelatedProducts)
+            {
+                <div class="fproduct-item">
+
+                    @* 1. Ảnh sản phẩm: Dùng Url.Content để xử lý đường dẫn ảnh *@
+                    @* 2. Action Link: Sửa thành ProductDetails (có s) cho khớp Controller *@
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                        <img src="@Url.Content(product.ProductImage)" style="width: 100%; height: 150px; object-fit: contain;" />
+                    </a>
+
+                    <div style="padding: 5px;">
+                        <p class="prodName">@product.ProductName</p>
+
+                        @* 3. SỬA LỖI GIÁ TIỀN TẠI ĐÂY (Ép kiểu chuẩn trước khi thay dấu) *@
+                        <p class="prodSale" style="color: red; font-weight: bold;">
+                            @product.ProductPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+}

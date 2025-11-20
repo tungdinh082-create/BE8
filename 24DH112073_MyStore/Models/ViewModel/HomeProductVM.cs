@@ -1,22 +1,25 @@
-﻿using _24DH112073_MyStore.Models;
+﻿
+using _24DH112073_MyStore.Models;
 using PagedList;
+using PagedList.Mvc;
+using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Web;
 namespace _24DH112073_MyStore.Models.ViewModel
 {
     public class HomeProductVM
     {
-        // Tiêu chí search theo tên, mô tả sp hoặc loại sản phẩm
         public string SearchTerm { get; set; }
 
         // Các thuộc tính hỗ trợ phân trang
-        public int PageNumber { get; set; } = 1;
-        public int PageSize { get; set; } = 6; // Slide 1117 ghi 6 sản phẩm/trang
+        public int PageNumber { get; set; } // Trang hiện tại
+        public int PageSize { get; set; } = 10; // Số sản phẩm mỗi trang (slide ghi 6, 10 đều được)
 
-        // Danh sách sản phẩm nổi bật
+        // danh sách sản phẩm nổi bật
         public List<Product> FeaturedProducts { get; set; }
 
         // Danh sách sản phẩm mới đã phân trang
-        public IPagedList<Product> NewProducts { get; set; }
+        public PagedList.IPagedList<Product> NewProducts { get; set; }
     }
 }

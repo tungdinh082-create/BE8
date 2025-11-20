@@ -1,18 +1,30 @@
-﻿@model _24DH112073_MyStore.Models.Product
+﻿﻿@model _24DH112073_MyStore.Models.Product
 
 @{
     ViewBag.Title = "Delete";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="bg-success">XOÁ SẢN PHẨM</h2>
+<h2 class="bg-success">XÓA SẢN PHẨM</h2>
+<h4 class="alert-danger">Bạn thực sự muốn xóa sản phẩm này à?</h4>
 
-<h4 class="alert-danger">Bạn thật sự muốn xoá sản phẩm này à?</h4>
+@* Hiển thị thông tin sản phẩm *@
 @Html.Partial("PVProductInfo", Model)
 
-<div class="form-check-reverse">
-    <div class="col-md-3 col-md-9">
-        @Html.ActionLink("Xoá", "Delete", new { id = Model.ProductID }, new { @class = "btn btn-primary btn" })
-        @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn" })
+@*============================================*@
+@* FIX CHÍNH: BẮT ĐẦU FORM XÓA CÓ PHƯƠNG THỨC POST *@
+@*============================================*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken() @* BẮT BUỘC để bảo mật *@
+
+    <div class="form-actions no-color">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+
+            @Html.ActionLink("Sửa", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary" }) |
+
+            @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-default" })
+        </div>
     </div>
-</div>
+}

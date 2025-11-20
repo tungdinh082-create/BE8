@@ -1,0 +1,170 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.CheckoutVM
+@{
+    ViewBag.Title = "Thanh toán";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<style>
+    .checkout-section { background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; margin-bottom: 20px; }
+    .total-section { background-color: #f9f9f9; padding: 20px; border-radius: 8px; position: sticky; top: 20px; }
+    .price-text { font-weight: bold; color: #333; }
+    .total-text { font-weight: bold; color: red; font-size: 1.2rem; }
+</style>
+
+<script>
+    // Hàm định dạng số tiền Việt Nam (ví dụ: 350000 -> 350.000)
+    function formatCurrency(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    // Hàm cập nhật tổng tiền khi chọn phương thức giao hàng
+    function updateShipping() {
+        // 1. Lấy giá trị tạm tính (từ data attribute)
+        var subtotal = parseFloat(document.getElementById("subtotal-value").dataset.value);
+
+        // 2. Tìm phương thức vận chuyển đang được chọn
+        var shippingCost = 0;
+        var shippingOptions = document.getElementsByName("ShippingMethod");
+        for (var i = 0; i < shippingOptions.length; i++) {
+            if (shippingOptions[i].checked) {
+                // Lấy giá tiền từ thuộc tính data-price
+                shippingCost = parseFloat(shippingOptions[i].dataset.price);
+                break;
+            }
+        }
+
+        // 3. Cập nhật hiển thị phí ship
+        document.getElementById("shipping-fee").innerText = formatCurrency(shippingCost) + " đ";
+
+        // 4. Tính tổng cộng và cập nhật hiển thị
+        var total = subtotal + shippingCost;
+        document.getElementById("total-amount").innerText = formatCurrency(total) + " đ";
+    }
+    
+    // Hàm bật/tắt chỉnh sửa địa chỉ
+    function enableAddressEdit() {
+        document.getElementById("shippingAddress").removeAttribute("readonly");
+        document.getElementById("shippingAddress").focus();
+        document.getElementById("newAddressGroup").style.display = "block";
+    }
+</script>
+
+<h2 class="text-center" style="margin-bottom: 30px; color: #007bff;">THANH TOÁN</h2>
+
+@using (Html.BeginForm("Checkout", "Order", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        @* --- CỘT TRÁI: THÔNG TIN ĐƠN HÀNG & GIAO HÀNG --- *@
+        <div class="col-md-8">
+            
+            @* 1. Danh sách sản phẩm *@
+            <div class="checkout-section">
+                <h4><i class="fa fa-shopping-bag"></i> Thông tin đơn hàng</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th class="text-center">Số lượng</th>
+                            <th class="text-right">Đơn giá</th>
+                            <th class="text-right">Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <tr>
+                                <td>@item.ProductName</td>
+                                <td class="text-center">@item.Quantity</td>
+                                <td class="text-right">@item.UnitPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') đ</td>
+                                <td class="text-right price-text">@item.TotalPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') đ</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @* 2. Thông tin giao hàng *@
+            <div class="checkout-section">
+                <h4><i class="fa fa-map-marker"></i> Thông tin giao hàng</h4>
+                
+                <div class="form-group">
+                    <label style="font-weight:bold;">Địa chỉ nhận hàng:</label>
+                    <div class="input-group">
+                        @Html.TextBoxFor(m => m.ShippingAddress, new { @class = "form-control", @id = "shippingAddress", @readonly = "readonly" })
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary" onclick="enableAddressEdit()">Thay đổi</button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(m => m.ShippingAddress, "", new { @class = "text-danger" })
+                    <small id="newAddressGroup" style="display:none; color: green;">Bạn có thể nhập địa chỉ mới trực tiếp vào ô trên.</small>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight:bold;">Phương thức vận chuyển:</label><br />
+                    
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="ship1" name="ShippingMethod" value="Giao hàng nhanh" data-price="20000" class="custom-control-input" onchange="updateShipping()">
+                        <label class="custom-control-label" for="ship1">Giao hàng nhanh (20.000đ)</label>
+                    </div>
+                    
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="ship2" name="ShippingMethod" value="Giao hàng tiết kiệm" data-price="15000" class="custom-control-input" onchange="updateShipping()">
+                        <label class="custom-control-label" for="ship2">Giao hàng tiết kiệm (15.000đ)</label>
+                    </div>
+                    @Html.ValidationMessageFor(m => m.ShippingMethod, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+             @* 3. Phương thức thanh toán *@
+            <div class="checkout-section">
+                <h4><i class="fa fa-credit-card"></i> Phương thức thanh toán</h4>
+                 <div class="form-group">
+                    <div class="custom-control custom-radio">
+                        @Html.RadioButtonFor(m => m.PaymentMethod, "Tiền mặt", new { id = "pay1", @class="custom-control-input" })
+                        <label class="custom-control-label" for="pay1">Thanh toán khi nhận hàng (COD)</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        @Html.RadioButtonFor(m => m.PaymentMethod, "Chuyển khoản", new { id = "pay2", @class="custom-control-input" })
+                        <label class="custom-control-label" for="pay2">Chuyển khoản ngân hàng</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        @Html.RadioButtonFor(m => m.PaymentMethod, "Paypal", new { id = "pay3", @class="custom-control-input" })
+                        <label class="custom-control-label" for="pay3">Thanh toán qua PayPal</label>
+                    </div>
+                     @Html.ValidationMessageFor(m => m.PaymentMethod, "", new { @class = "text-danger" })
+                 </div>
+            </div>
+
+        </div>
+
+        @* --- CỘT PHẢI: TỔNG CỘNG --- *@
+        <div class="col-md-4">
+            <div class="total-section">
+                <h4>Tổng cộng</h4>
+                <hr />
+                <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
+                    <span>Tạm tính:</span>
+                    <span id="subtotal-value" data-value="@Model.TotalAmount">
+                        @Model.TotalAmount.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') đ
+                    </span>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
+                    <span>Phí vận chuyển:</span>
+                    <span id="shipping-fee" style="font-style:italic;">0 đ</span>
+                </div>
+                <hr />
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+                    <span style="font-weight:bold; font-size: 1.1rem;">Thành tiền:</span>
+                    <span id="total-amount" class="total-text">
+                        @Model.TotalAmount.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') đ
+                    </span>
+                </div>
+                
+                <input type="submit" value="ĐẶT HÀNG" class="btn btn-primary btn-lg btn-block" />
+                <a href="@Url.Action("Index", "Cart")" class="btn btn-link btn-block">Quay lại giỏ hàng</a>
+            </div>
+        </div>
+    </div>
+}

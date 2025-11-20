@@ -1,22 +1,24 @@
-﻿using _24DH112073_MyStore.Models; 
+﻿
+using _24DH112073_MyStore.Models;
 using PagedList;
+using System;
 using System.Collections.Generic;
-
-namespace _24DH112073_MyStore.Models.ViewModel 
+using System.Linq;
+using System.Web;
+namespace _24DH112073_MyStore.Models.ViewModel
 {
     public class ProductDetailsVM
     {
-        public Product product { get; set; }
-        public int quantity { get; set; } = 1;
+        // Sửa thành chữ hoa để khớp với View
+        public Product Product { get; set; }
+        public int Quantity { get; set; } = 1;
+        public decimal EstimatedValue { get; set; } // Giá trị tạm tính
 
-        // Thuộc tính phân trang
+        // Các thuộc tính phân trang
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 3;
 
-        // Danh sách 8 sản phẩm cùng danh mục (Related)
         public IPagedList<Product> RelatedProducts { get; set; }
-
-        // Danh sách 8 sản phẩm bán chạy nhất cùng danh mục (Top Deals)
         public IPagedList<Product> TopProducts { get; set; }
     }
 }

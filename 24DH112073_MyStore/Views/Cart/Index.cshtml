@@ -1,0 +1,169 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.Cart
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<style>
+    .shoppingcart {
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .cart-section {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cart-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .table img {
+        max-height: 80px;
+        width: auto;
+    }
+
+    .quantity-input {
+        width: 50px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 3px;
+    }
+    /* Biểu tượng xóa */
+    .btn-delete {
+        color: #dc3545;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border: none;
+        background: none;
+    }
+
+        .btn-delete:hover {
+            color: #a71d2a;
+        }
+</style>
+
+<script>
+    function cartUpdateQuantity(id, newQuantity) {
+        if (newQuantity < 1) return;
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = '@Url.Action("UpdateQuantity", "Cart")';
+
+        const idInput = document.createElement('input');
+        idInput.type = 'hidden'; idInput.name = 'id'; idInput.value = id;
+        form.appendChild(idInput);
+
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'hidden'; quantityInput.name = 'quantity'; quantityInput.value = newQuantity;
+        form.appendChild(quantityInput);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
+
+<div class="container shoppingcart">
+    <h2 style="margin-bottom: 20px;">GIỎ HÀNG</h2>
+
+    @if (Model != null && Model.Items.Any())
+    {
+        <div class="row">
+            @* --- CỘT TRÁI: DANH SÁCH SẢN PHẨM --- *@
+            <div class="col-md-8">
+                @foreach (var categoryGroup in Model.GroupedItems)
+                {
+                    <div class="cart-section">
+                        <h4 style="border-bottom: 1px solid #eee; padding-bottom: 10px;">@categoryGroup.Key</h4>
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <th colspan="2">Sản phẩm</th>
+                                    <th>Đơn giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in categoryGroup)
+                                {
+                                    <tr>
+                                        <td><img src="@Url.Content(item.ProductImage)" alt="@item.ProductName" /></td>
+                                        <td>@item.ProductName</td>
+
+                                        @* SỬA: Định dạng tiền *@
+                                        <td>@item.UnitPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫</td>
+
+                                        <td>
+                                            <div style="display: flex; align-items: center;">
+                                                <button class="btn btn-light btn-sm" onclick="cartUpdateQuantity(@item.ProductID, @item.Quantity - 1)">-</button>
+                                                <input type="number" class="quantity-input mx-1" value="@item.Quantity" readonly />
+                                                <button class="btn btn-light btn-sm" onclick="cartUpdateQuantity(@item.ProductID, @item.Quantity + 1)">+</button>
+                                            </div>
+                                        </td>
+
+                                        @* SỬA: Định dạng tiền *@
+                                        <td style="font-weight: bold;">@item.TotalPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫</td>
+
+                                        <td>
+                                            @* Nút xóa từng sản phẩm (dùng icon thùng rác) *@
+                                            <form action="@Url.Action("RemoveFromCart", "Cart")" method="post" style="display:inline;">
+                                                @Html.Hidden("id", item.ProductID)
+                                                <button type="submit" class="btn-delete" title="Xóa"><i class="fa fa-trash"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+                @* Nút xóa tất cả *@
+                <div style="text-align: right; margin-bottom: 20px;">
+                    @Html.ActionLink("Xóa tất cả giỏ hàng", "ClearCart", "Cart", null, new { @class = "btn btn-outline-danger" })
+                </div>
+
+                @* Nút Tiếp tục mua hàng *@
+                <div class="cart-section">
+                    @Html.ActionLink("Tiếp tục mua hàng", "Index", "Home", null, new { @class = "btn btn-warning btn-block" })
+                </div>
+            </div>
+
+            @* --- CỘT PHẢI: TỔNG TIỀN --- *@
+            <div class="col-md-4">
+                <div class="cart-section">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        <span>Tổng giá trị:</span>
+                        @* SỬA: Định dạng tiền *@
+                        <span style="color: red; font-size: 20px; font-weight: bold;">
+                            @Model.TotalValue().ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫
+                        </span>
+                    </div>
+                    @Html.ActionLink("Mua hàng", "Checkout", "Order", null, new { @class = "btn btn-danger btn-lg btn-block" })
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Giỏ hàng của bạn đang trống. @Html.ActionLink("Mua sắm ngay", "Index", "Home")
+        </div>
+    }
+
+    @* --- SẢN PHẨM TƯƠNG TỰ --- *@
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("_PVSimilarProduct", Model)
+        </div>
+    </div>
+</div>

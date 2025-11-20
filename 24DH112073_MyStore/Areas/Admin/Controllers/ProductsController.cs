@@ -9,49 +9,48 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace _24DH112073_MyStore.Areas.Admin.Controllers
 {
+
     public class ProductsController : Controller
     {
-        // Khởi tạo db context bên ngoài Action
         private MyStoreEntities db = new MyStoreEntities();
 
-        // GET: Home/Index
         // GET: Admin/Products
         public ActionResult Index(string searchTerm, decimal? minPrice, decimal? maxPrice, string sortOrder, int? page)
         {
             var model = new ProductSearchVM();
-            var products = db.Products.Include(p => p.Category).AsQueryable(); // Lấy tất cả sản phẩm
-
-            // 1. Tìm kiếm sản phẩm dựa trên từ khóa (Tên, Mô tả, Danh mục)
+            var products = db.Products.AsQueryable();
+            // Tìm kiếm sản phẩm dựa trên từ khóa
             if (!string.IsNullOrEmpty(searchTerm))
             {
+                model.SearchTerm = searchTerm;
                 products = products.Where(p =>
                     p.ProductName.Contains(searchTerm) ||
                     p.ProductDecription.Contains(searchTerm) ||
-                    p.Category.CategoryName.Contains(searchTerm)
-                );
+                    p.Category.CategoryName.Contains(searchTerm));
             }
-
-            // 2. Tìm kiếm sản phẩm dựa trên giá tối thiểu
+            // Tìm kiếm sản phẩm dựa trên giá tối thiểu
             if (minPrice.HasValue)
             {
+                model.MinPrice = minPrice;
+
                 products = products.Where(p => p.ProductPrice >= minPrice.Value);
             }
-
-            // 3. Tìm kiếm sản phẩm dựa trên giá tối đa
+            // Tìm kiếm sản phẩm dựa trên giá tối đa
             if (maxPrice.HasValue)
             {
+                model.MaxPrice = maxPrice;
+
                 products = products.Where(p => p.ProductPrice <= maxPrice.Value);
             }
-
-            // 4. Áp dụng sắp xếp dựa trên lựa chọn của người dùng
+            // Áp dụng sắp xếp dựa trên lựa chọn của người dùng
+            // ...
+            // Áp dụng sắp xếp dựa trên lựa chọn của người dùng
             switch (sortOrder)
             {
-                case "name_asc":
-                    products = products.OrderBy(p => p.ProductName);
-                    break;
                 case "name_desc":
                     products = products.OrderByDescending(p => p.ProductName);
                     break;
@@ -61,24 +60,17 @@ namespace _24DH112073_MyStore.Areas.Admin.Controllers
                 case "price_desc":
                     products = products.OrderByDescending(p => p.ProductPrice);
                     break;
-                default:
-                    products = products.OrderBy(p => p.ProductName); // Mặc định sắp xếp theo tên
+                default: // Mặc định là Tên tăng dần (name_asc)
+                    products = products.OrderBy(p => p.ProductName);
                     break;
             }
-
-            // 5. Đoạn code xử lý phân trang
-            int pageNumber = page ?? 1; // Lấy số trang hiện tại (mặc định là 1)
-            int pageSize = 2; // Số sản phẩm mỗi trang (SỬA LẠI SỐ LƯỢNG BẠN MUỐN)
-
-            // Gán các giá trị tìm kiếm vào model để View giữ lại
-            model.SearchTerm = searchTerm;
-            model.MinPrice = minPrice;
-            model.MaxPrice = maxPrice;
             model.SortOrder = sortOrder;
 
-            // Đóng gói lệnh query, ToPagedList sẽ lấy danh sách đã phân trang
-            model.Products = products.ToPagedList(pageNumber, pageSize);
+            int pageNumber = (page ?? 1);
+            int pageSize = 2; // Ví dụ: 2 sản phẩm mỗi trang
 
+
+            model.Products = products.ToPagedList(pageNumber, pageSize);
             return View(model);
         }
 
@@ -109,7 +101,7 @@ namespace _24DH112073_MyStore.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,CategoryID,ProductName,ProductPrice,ProductImage,ProductDescription")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,CategoryID,ProductName,ProductDecription,ProductPrice,ProductImage")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -143,7 +135,7 @@ namespace _24DH112073_MyStore.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,CategoryID,ProductName,ProductPrice,ProductImage,ProductDescription")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,CategoryID,ProductName,ProductDecription,ProductPrice,ProductImage")] Product product)
         {
             if (ModelState.IsValid)
             {

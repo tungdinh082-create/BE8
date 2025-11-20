@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using _24DH112073_MyStore.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using _24DH112073_MyStore.Models;
 
 namespace _24DH112073_MyStore.Areas.Admin.Controllers
 {
+
     public class CategoriesController : Controller
     {
         private MyStoreEntities db = new MyStoreEntities();
@@ -40,6 +37,24 @@ namespace _24DH112073_MyStore.Areas.Admin.Controllers
         {
             return View();
         }
+
+        // POST: Admin/Categories/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "CategoryID,CategoryName")] Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Categories.Add(category);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(category);
+        }
+
         // GET: Admin/Categories/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -68,23 +83,6 @@ namespace _24DH112073_MyStore.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(category);
-        }
-
-        // POST: Admin/Categories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoryID,CategoryName")] Category category)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Categories.Add(category);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
             return View(category);
         }
 

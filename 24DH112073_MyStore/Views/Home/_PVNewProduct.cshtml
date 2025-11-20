@@ -1,0 +1,54 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.HomeProductVM
+@using PagedList.Mvc
+
+@* Link CSS *@
+<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
+
+@if (Model.NewProducts != null && Model.NewProducts.Any())
+{
+    <section class="container-fluid listProduct">
+        <h2>Sản phẩm mới</h2>
+        <ul class="list-container">
+            @foreach (var product in Model.NewProducts)
+            {
+                <li class="lproduct-item">
+
+                    @* 1. KHUNG CHỨA ẢNH (Quan trọng để ảnh vừa khung) *@
+                    <div class="img-container">
+                        @* Sửa tên Action thành ProductDetails (có chữ s) *@
+                        <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                            @* Dùng Url.Content để xử lý đường dẫn ảnh *@
+                            <img src="@Url.Content(product.ProductImage)" alt="@product.ProductName" />
+                        </a>
+                    </div>
+
+                    @* 2. KHUNG CHỨA THÔNG TIN *@
+                    <div class="product-info">
+                        @* Sửa lỗi hiển thị giá tiền *@
+                        <p class="prodPrice">
+                            @product.ProductPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫
+                        </p>
+
+                        <p class="prodName">@product.ProductName</p>
+
+                        @* Thêm hiển thị danh mục *@
+                        <p class="prodCate">@product.Category.CategoryName</p>
+
+                        <p class="prodSale">Đã bán: @product.OrderDetails.Count</p>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        @* Phân trang *@
+        <div class="pagination-container">
+            @Html.PagedListPager(Model.NewProducts, page => Url.Action("Index", new { page, searchTerm = Model.SearchTerm }))
+        </div>
+    </section>
+}
+else
+{
+    <div style="text-align:center; padding: 20px;">
+        <p>Không tìm được sản phẩm nào phù hợp.</p>
+    </div>
+}

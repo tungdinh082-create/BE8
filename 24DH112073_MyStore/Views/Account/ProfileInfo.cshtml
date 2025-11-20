@@ -1,0 +1,71 @@
+﻿@* Đổi namespace này cho đúng với ProfileVM của bạn *@
+@model _24DH112073_MyStore.Models.ViewModel.ProfileVM
+
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml"; //
+}
+
+<h2>THÔNG TIN TÀI KHOẢN</h2>
+
+@* SỬA Ở ĐÂY: Form này sẽ gọi Action "EditProfile" (POST) *@
+@using (Html.BeginForm("EditProfile", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @* Báo thành công (nếu có) *@
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+        }
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên đăng nhập</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Họ và Tên</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Số điện thoại</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerPhone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerPhone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Email</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerEmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Địa chỉ</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cập nhật" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}

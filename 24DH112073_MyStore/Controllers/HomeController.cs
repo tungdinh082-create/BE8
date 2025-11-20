@@ -1,121 +1,110 @@
 ﻿using _24DH112073_MyStore.Models;
 using _24DH112073_MyStore.Models.ViewModel;
 using PagedList;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Web;
+using System.Net; // <-- Thư viện cần thiết
 using System.Web.Mvc;
 
 namespace _24DH112073_MyStore.Controllers
 {
     public class HomeController : Controller
     {
-        // Khởi tạo db context bên ngoài Action
         private MyStoreEntities db = new MyStoreEntities();
 
-        // GET: Home/Index
+        // Action Trang chủ (ĐÃ SỬA LỖI GÕ SAI)
+        // 1. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
         public ActionResult Index(string searchTerm, int? page)
         {
             var model = new HomeProductVM();
-            var products = db.Products.Include(p => p.Category).AsQueryable();
+            var products = db.Products.AsQueryable();
 
-            // 1. Tìm kiếm sản phẩm
+            // 2. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
             if (!string.IsNullOrEmpty(searchTerm))
             {
+                // 3. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
+                model.SearchTerm = searchTerm;
                 products = products.Where(p =>
+                    // 4. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
                     p.ProductName.Contains(searchTerm) ||
+                    // 5. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
                     p.ProductDecription.Contains(searchTerm) ||
+                    // 6. SỬA Ở ĐÂY: "searchTearm" -> "searchTerm"
                     p.Category.CategoryName.Contains(searchTerm)
                 );
             }
-            model.SearchTerm = searchTerm;
 
-            // 2. Lấy top 10 sản phẩm bán chạy nhất (Featured)
-            model.FeaturedProducts = products
-                .OrderByDescending(p => p.OrderDetails.Count())
-                .Take(10)
-                .ToList();
+            int pageNumber = page ?? 1;
+            int pageSize = 6;
 
-            // 3. Lấy 20 sản phẩm ít bán nhất (New) và phân trang
-            int pageNumber = page ?? model.PageNumber;
-            int pageSize = model.PageSize;
+            model.FeaturedProducts = products.OrderByDescending(p => p.OrderDetails.Count())
+                                               .Take(10).ToList();
 
-            model.NewProducts = products
-                .OrderBy(p => p.OrderDetails.Count()) // Sắp xếp theo ít người mua nhất
-                .Take(20)
-                .ToPagedList(pageNumber, pageSize);
+            model.NewProducts = products.OrderBy(p => p.OrderDetails.Count())
+                                           .ToPagedList(pageNumber, pageSize);
 
             return View(model);
         }
 
-        public ActionResult About()
+        // Action Menu Danh mục (Code của bạn đã đúng)
+        public ActionResult CategoryMenu()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var categories = db.Categories.ToList();
+            return PartialView("_CategoryMenuPV", categories);
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
-        // (Bạn đã có Action Index() ở trên)
-
-        // GET: Home/ProductDetails/5
+        // Action ProductDetail (Code bạn gửi đã được sửa)
         public ActionResult ProductDetails(int? id, int? quantity, int? page)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Product pro = db.Products.Find(id);
             if (pro == null)
             {
                 return HttpNotFound();
             }
 
-            // Lấy tất cả sản phẩm cùng danh mục (trừ sản phẩm hiện tại)
-            var products = db.Products.Include(p => p.Category).Include(p => p.OrderDetails)
-                .Where(p => p.CategoryID == pro.CategoryID && p.ProductID != pro.ProductID)
-                .AsQueryable();
+            var products = db.Products.Where(p => p.CategoryID == pro.CategoryID && p.ProductID != pro.ProductID).AsQueryable();
+            ProductDetailsVM model = new ProductDetailsVM();
 
-            var model = new ProductDetailsVM();
+            int pageNumber = page ?? 1;
+            int pageSize = model.PageSize;
 
-            int pageNumber = page ?? model.PageNumber;
-            int pageSize = model.PageSize; // 3 sản phẩm/trang
+            model.Product = pro;
 
-            model.product = pro;
+            // Chú ý: .ToPagedList(1, 8) ở RelatedProducts có thể gây lỗi nếu products < 8
+            // Tạm thời để theo code của bạn
+            model.RelatedProducts = products.OrderBy(p => p.ProductID)
+                                            .Take(8).ToPagedList(1, 8);
 
-            // Lấy 8 sản phẩm liên quan (cùng danh mục)
-            model.RelatedProducts = products.Take(8).ToPagedList(1, 8);
-
-            // Lấy 8 sản phẩm bán chạy nhất (cùng danh mục) và phân trang
-            model.TopProducts = products
-                .OrderByDescending(p => p.OrderDetails.Count())
-                .Take(8)
-                .ToPagedList(pageNumber, pageSize);
+            model.TopProducts = products.OrderByDescending(p => p.OrderDetails.Count())
+                                        .Take(8).ToPagedList(pageNumber, pageSize);
 
             if (quantity.HasValue)
             {
-                model.quantity = quantity.Value;
+                model.Quantity = quantity.Value;
             }
 
-            return View(model);
+            // Ghi rõ tên View để trả về (tên file là "ProductDetails.cshtml")
+            // Đảm bảo bạn có file View tên là "ProductDetails.cshtml"
+            return View("ProductDetails", model);
         }
 
-        // (Thêm cả hàm Dispose này vào cuối Controller)
-        protected override void Dispose(bool disposing)
+
+        // Các Action mặc định (Giữ lại)
+        public ActionResult About()
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            ViewBag.Message = "Your application description page.";
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+            return View();
         }
     }
 }

@@ -1,0 +1,51 @@
+﻿@* Sử dụng LoginVM từ namespace ViewModel của bạn *@
+@model _24DH112073_MyStore.Models.ViewModel.LoginVM
+@{
+    ViewBag.Title = "Đăng nhập Admin";
+    // Sử dụng Layout của Admin Area
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 style="text-align:center; padding-bottom: 20px;">ĐĂNG NHẬP ADMIN</h2>
+
+            @* Form này sẽ gửi dữ liệu lên Action "Login" của "AccountController" trong Area hiện tại (Admin) *@
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @* Token chống tấn công CSRF *@
+                @Html.AntiForgeryToken()
+
+                @* Hiển thị tóm tắt lỗi (nếu có) *@
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Username, new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                        @* Hiển thị lỗi cho trường Username (nếu có) *@
+                        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "control-label col-md-4" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @* Hiển thị lỗi cho trường Password (nếu có) *@
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+                    </div>
+                </div>
+            } @* <-- Dấu } này để đóng @using (Html.BeginForm) *@
+        </div> @* <-- Dấu </div> này để đóng "col-md-6" *@
+    </div> @* <-- Dấu </div> này để đóng "row" *@
+</div> @* <-- Dấu </div> này để đóng "container" *@

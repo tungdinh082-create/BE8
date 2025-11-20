@@ -1,8 +1,62 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+﻿@using System.Web
+@model IEnumerable<_24DH112073_MyStore.Models.ViewModel.StatisticsViewModel>
+@{ ViewBag.Title = "Trang chủ Admin"; Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<h2 class="bg-success" style="padding: 10px; border-radius: 5px;">THỐNG KÊ HÀNG HÓA TỪNG LOẠI</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr class="bg-success">
+            <th>LOẠI HÀNG</th>
+            <th>SỐ LƯỢNG</th>
+            <th>GIÁ CAO NHẤT</th>
+            <th>GIÁ THẤP NHẤT</th>
+            <th>GIÁ TRUNG BÌNH</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.Raw(HttpUtility.HtmlDecode(item.LoaiHang))</td> @* FIX hiển thị tiếng Việt *@
+                <td>@item.SoLuong</td>
+                <td>@String.Format("{0:N0}", item.GiaCaoNhat)</td>
+                <td>@String.Format("{0:N0}", item.GiaThapNhat)</td>
+                <td>@String.Format("{0:N0}", item.GiaTrungBinh)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<h2 class="bg-success" style="padding: 10px; border-radius: 5px;">BIỂU ĐỒ THỐNG KÊ</h2>
+<div id="piechart_div" style="width: 100%; height: 500px;"></div>
+
+@section scripts {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Loại hàng');
+            data.addColumn('number', 'Số lượng');
+
+            data.addRows([
+                @foreach (var item in Model)
+                {
+                    // FIX: Giải mã chuỗi C# trước khi đưa vào JavaScript
+                    var decodedLoaiHang = HttpUtility.HtmlDecode(item.LoaiHang);
+
+                    // FIX: Dùng @Html.Raw để tránh mã hóa lần nữa
+                    @Html.Raw($"['{decodedLoaiHang}', {item.SoLuong}],")
+                }
+            ]);
+
+            var options = { 'title': 'TỶ LỆ HÀNG HÓA' };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+            chart.draw(data, options);
+        }
+    </script>
 }
-
-<h2>TRANG QUẢN TRỊ</h2>
-

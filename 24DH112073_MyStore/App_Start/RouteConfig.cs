@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,10 +15,12 @@ namespace _24DH112073_MyStore
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+             name: "Default",
+             url: "{controller}/{action}/{id}",
+             defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+            // Thêm Namespaces để chỉ tìm ở thư mục Controller gốc (Customer)
+            namespaces: new[] { "_24DH112073_MyStore.Controllers" }
+);
         }
     }
 }

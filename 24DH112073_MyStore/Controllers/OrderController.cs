@@ -1,46 +1,46 @@
 ﻿using _24DH112073_MyStore.Models;
-using _24DH112073_MyStore.Models.ViewModel; 
+using _24DH112073_MyStore.Models.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace _24DH112073_MyStore.Controllers 
+namespace _24DH112073_MyStore.Controllers
 {
     public class OrderController : Controller
     {
         private MyStoreEntities db = new MyStoreEntities();
 
         // GET: Order/Checkout
-        [Authorize] // Bắt buộc đăng nhập
+        [HttpGet]
         public ActionResult Checkout()
         {
-            // Kiểm tra giỏ hàng
             var cart = Session["Cart"] as Cart;
             if (cart == null || !cart.Items.Any())
             {
-                return RedirectToAction("Index", "Home"); // Giỏ rỗng, về trang chủ
+                return RedirectToAction("Index", "Home");
             }
 
-            // Xác thực người dùng
-            var user = db.Users.SingleOrDefault(u => u.Username == User.Identity.Name);
-            if (user == null)
+            if (Session["UserRole"] == null || !Session["UserRole"].ToString().Equals("Customer", StringComparison.OrdinalIgnoreCase))
             {
-                return RedirectToAction("Login", "Account"); // Chưa đăng nhập
+                return RedirectToAction("Login", "Account");
             }
 
-            // Lấy thông tin khách hàng
-            var customer = db.Customers.SingleOrDefault(c => c.Username == user.Username);
+            var username = Session["Username"].ToString();
+            var customer = db.Customers.SingleOrDefault(c => c.Username == username);
+            if (customer == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
-            // Tạo CheckoutVM
             var model = new CheckoutVM
             {
                 CartItems = cart.Items.ToList(),
                 TotalAmount = cart.TotalValue(),
-                OrderDate = System.DateTime.Now,
-                ShippingAddress = customer.CustomerAddress, // Lấy địa chỉ mặc định (ĐÃ SỬA TÊN CỘT)
                 CustomerID = customer.CustomerID,
-                Username = customer.Username
+                Username = customer.Username,
+                ShippingAddress = customer.CustomerAddress
             };
 
             return View(model);
@@ -49,92 +49,104 @@ namespace _24DH112073_MyStore.Controllers
         // POST: Order/Checkout
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult Checkout(CheckoutVM model)
         {
             var cart = Session["Cart"] as Cart;
-            if (cart == null || !cart.Items.Any())
+
+            // Kiểm tra session đăng nhập
+            if (Session["Username"] == null) return RedirectToAction("Login", "Account");
+
+            var username = Session["Username"].ToString();
+            var customer = db.Customers.SingleOrDefault(c => c.Username == username);
+
+            if (cart == null || !cart.Items.Any() || customer == null)
             {
                 return RedirectToAction("Index", "Home");
             }
 
             if (!ModelState.IsValid)
             {
-                model.CartItems = cart.Items.ToList(); // Gán lại giỏ hàng nếu model không hợp lệ
+                model.CartItems = cart.Items.ToList();
+                model.TotalAmount = cart.TotalValue();
                 return View(model);
             }
 
-            // Xác thực người dùng
-            var user = db.Users.SingleOrDefault(u => u.Username == User.Identity.Name);
-            var customer = db.Customers.SingleOrDefault(c => c.Username == user.Username);
-
-            // Thiết lập trạng thái thanh toán
-            string paymentStatus = "Chưa thanh toán";
-            switch (model.PaymentMethod)
+            // --- [MỚI] TÍNH PHÍ VẬN CHUYỂN ---
+            decimal shippingFee = 0;
+            if (model.ShippingMethod == "Giao hàng nhanh")
             {
-                case "Tiền mặt":
-                    paymentStatus = "Thanh toán tiền mặt"; break;
-                case "Paypal":
-                    paymentStatus = "Thanh toán Paypal"; break;
-                //...
-                default:
-                    paymentStatus = "Chưa thanh toán"; break;
+                shippingFee = 20000;
             }
-
-            // Xử lý nếu chọn Paypal (chuyển hướng)
-            if (model.PaymentMethod == "Paypal")
+            else if (model.ShippingMethod == "Giao hàng tiết kiệm")
             {
-                // Chuyển hướng tới PaypalController
-                return RedirectToAction("PaymentWithPaypal", "Paypal", model);
+                shippingFee = 15000;
             }
+            // ----------------------------------
 
-            // Tạo đơn hàng (Order)
             var order = new Order
             {
                 CustomerID = customer.CustomerID,
-                OrderDate = System.DateTime.Now,
-                TotalAmount = cart.TotalValue(),
-                PaymentStatus = paymentStatus,
+                OrderDate = DateTime.Now,
+
+                // [QUAN TRỌNG] Cộng tiền hàng + Tiền ship vào Tổng đơn hàng
+                TotalAmount = cart.TotalValue() + shippingFee,
+
+                ShippingAddress = model.ShippingAddress,
                 PaymentMethod = model.PaymentMethod,
-                ShippingMethod = model.ShippingMethod,
-                ShippingAddress = model.ShippingAddress, // Tên cột đã sửa
-                OrderDetails = new List<OrderDetail>()
+                DeliveryMethod = model.ShippingMethod,
+                PaymentStatus = "Chưa thanh toán"
             };
 
-            // Tạo chi tiết đơn hàng (OrderDetail)
-            foreach (var item in cart.Items)
+            order.OrderDetails = cart.Items.Select(item => new OrderDetail
             {
-                order.OrderDetails.Add(new OrderDetail
-                {
-                    ProductID = item.ProductID,
-                    Quantity = item.Quantity,
-                    UnitPrice = item.UnitPrice
-                    // TotalPrice sẽ được DB tự tính
-                });
-            }
+                ProductID = item.ProductID,
+                Quantity = item.Quantity,
+                UnitPrice = item.UnitPrice
+            }).ToList();
 
-            // Lưu đơn hàng vào CSDL
             db.Orders.Add(order);
             db.SaveChanges();
 
-            // Xóa giỏ hàng
             Session["Cart"] = null;
 
-            // Chuyển tới trang Xác nhận đơn hàng
             return RedirectToAction("OrderSuccess", new { id = order.OrderID });
         }
 
         // GET: Order/OrderSuccess
         public ActionResult OrderSuccess(int id)
         {
-            var order = db.Orders.Include(o => o.OrderDetails.Select(od => od.Product))
-                                 .SingleOrDefault(o => o.OrderID == id);
+            var order = db.Orders
+                          .Include(o => o.OrderDetails.Select(od => od.Product))
+                          .SingleOrDefault(o => o.OrderID == id);
 
             if (order == null)
             {
                 return HttpNotFound();
             }
+
             return View(order);
+        }
+
+        // GET: Order/OrderHistory
+        public ActionResult OrderHistory()
+        {
+            if (Session["UserRole"] == null || !Session["UserRole"].ToString().Equals("Customer", StringComparison.OrdinalIgnoreCase))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var username = Session["Username"].ToString();
+            var customer = db.Customers.SingleOrDefault(c => c.Username == username);
+
+            if (customer == null) return RedirectToAction("Login", "Account");
+
+            var orders = db.Orders
+                           .Where(o => o.CustomerID == customer.CustomerID)
+                           .OrderByDescending(o => o.OrderDate)
+                           .Include(o => o.OrderDetails.Select(od => od.Product))
+                           .ToList();
+
+            return View(orders);
         }
     }
 }

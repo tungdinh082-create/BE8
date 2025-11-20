@@ -1,0 +1,57 @@
+﻿@model IEnumerable<_24DH112073_MyStore.Models.Customer>
+
+@{
+    ViewBag.Title = "Quản lý khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="bg-success" style="padding: 10px; border-radius: 5px;">QUẢN LÝ KHÁCH HÀNG</h2>
+
+@* Đã xóa nút "Nhập thêm" *@
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr class="bg-success">
+
+            @* === BƯỚC SỬA TIÊU ĐỀ === *@
+            <th>
+                Tên đăng nhập @* Thay cho Username *@
+            </th>
+            <th>
+                Họ và Tên @* Thay cho CustomerName *@
+            </th>
+            <th>
+                Email @* Giữ CustomerEmail, không thay bằng Mật khẩu *@
+            </th>
+            <th>
+                Role @* Thay cho UserRole *@
+            </th>
+            <th>Chức năng</th>
+            @* === KẾT THÚC SỬA === *@
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.UserRole)
+                </td>
+                <td>
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.CustomerID }, new { @class = "btn btn-success btn-sm" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.CustomerID }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

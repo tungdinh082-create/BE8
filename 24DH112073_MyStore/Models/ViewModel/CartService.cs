@@ -1,16 +1,19 @@
-﻿using System.Web;
+﻿
+using _24DH112073_MyStore.Models.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-namespace _24DH112073_MyStore.Models.ViewModel // <-- ĐÃ SỬA
+namespace _24DH112073_MyStore.Models.ViewModel
 {
     public class CartService
     {
         private readonly HttpSessionStateBase session;
-
         public CartService(HttpSessionStateBase session)
         {
             this.session = session;
         }
-
         public Cart GetCart()
         {
             var cart = (Cart)session["Cart"];
@@ -21,7 +24,6 @@ namespace _24DH112073_MyStore.Models.ViewModel // <-- ĐÃ SỬA
             }
             return cart;
         }
-
         public void ClearCart()
         {
             session["Cart"] = null;

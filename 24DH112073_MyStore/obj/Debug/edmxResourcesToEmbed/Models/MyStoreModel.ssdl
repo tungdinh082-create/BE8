@@ -17,6 +17,7 @@
     <Property Name="CustomerEmail" Type="nvarchar(max)" />
     <Property Name="CustomerAddress" Type="nvarchar(max)" />
     <Property Name="Username" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CustomerImage" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -30,7 +31,6 @@
     <Property Name="ShippingAddress" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DeliveryMethod" Type="nvarchar(max)" />
     <Property Name="PaymentMethod" Type="nvarchar(max)" />
-    <Property Name="ShippingMethod" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="OrderDetail">
     <Key>
@@ -41,7 +41,6 @@
     <Property Name="OrderID" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
     <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="TotalPrice" Type="decimal" Precision="29" Scale="2" StoreGeneratedPattern="Computed" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -50,20 +49,9 @@
     <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CategoryID" Type="int" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ProductDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductDecription" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ProductImage" Type="nvarchar(max)" />
-    <Property Name="ProductDecription" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -71,9 +59,9 @@
     </Key>
     <Property Name="Username" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="UserRole" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="UserRole" Type="nchar" MaxLength="20" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Order__CustomerI__5EBF139D">
+  <Association Name="FK__Order__CustomerI__5441852A">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,7 +73,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Order__628FA481">
+  <Association Name="FK__OrderDeta__Order__5812160E">
     <End Role="Order" Type="Self.Order" Multiplicity="1" />
     <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -97,7 +85,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Produ__619B8048">
+  <Association Name="FK__OrderDeta__Produ__571DF1D5">
     <End Role="Product" Type="Self.Product" Multiplicity="1" />
     <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -139,17 +127,16 @@
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Order__CustomerI__5EBF139D" Association="Self.FK__Order__CustomerI__5EBF139D">
+    <AssociationSet Name="FK__Order__CustomerI__5441852A" Association="Self.FK__Order__CustomerI__5441852A">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Order__628FA481" Association="Self.FK__OrderDeta__Order__628FA481">
+    <AssociationSet Name="FK__OrderDeta__Order__5812160E" Association="Self.FK__OrderDeta__Order__5812160E">
       <End Role="Order" EntitySet="Order" />
       <End Role="OrderDetail" EntitySet="OrderDetail" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Produ__619B8048" Association="Self.FK__OrderDeta__Produ__619B8048">
+    <AssociationSet Name="FK__OrderDeta__Produ__571DF1D5" Association="Self.FK__OrderDeta__Produ__571DF1D5">
       <End Role="Product" EntitySet="Product" />
       <End Role="OrderDetail" EntitySet="OrderDetail" />
     </AssociationSet>

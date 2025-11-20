@@ -4,19 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f01279c0171c416a955a0d9fec2ebb76" Name="Diagram1" ZoomLevel="77">
-        <EntityTypeShape EntityType="MyStoreModel.Category" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyStoreModel.sysdiagram" Width="1.5" PointX="7.375" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyStoreModel.User" Width="1.5" PointX="0.875" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyStoreModel.Customer" Width="1.5" PointX="3" PointY="4.625" />
-        <EntityTypeShape EntityType="MyStoreModel.Order" Width="1.5" PointX="5.25" PointY="4.5" />
-        <EntityTypeShape EntityType="MyStoreModel.OrderDetail" Width="1.5" PointX="4.875" PointY="0.875" />
-        <EntityTypeShape EntityType="MyStoreModel.Product" Width="1.5" PointX="3.125" PointY="0.75" />
-        <AssociationConnector Association="MyStoreModel.FK_Pro_Category" />
-        <AssociationConnector Association="MyStoreModel.FK__Order__CustomerI__5EBF139D" />
-        <AssociationConnector Association="MyStoreModel.FK_User_Customer" />
-        <AssociationConnector Association="MyStoreModel.FK__OrderDeta__Order__628FA481" />
-        <AssociationConnector Association="MyStoreModel.FK__OrderDeta__Produ__619B8048" />
+      <Diagram DiagramId="43b1ffbf2caa497dab98cfdfe166d6f2" Name="Diagram1">
+        <EntityTypeShape EntityType="MyStoreModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyStoreModel.Customer" Width="1.5" PointX="4.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyStoreModel.Order" Width="1.5" PointX="7" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyStoreModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyStoreModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyStoreModel.User" Width="1.5" PointX="2.25" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="MyStoreModel.FK_Pro_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="MyStoreModel.FK__Order__CustomerI__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="MyStoreModel.FK_User_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MyStoreModel.FK__OrderDeta__Order__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="MyStoreModel.FK__OrderDeta__Produ__571DF1D5" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

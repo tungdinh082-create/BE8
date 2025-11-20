@@ -1,0 +1,103 @@
+﻿@model _24DH112073_MyStore.Models.Customer
+
+@{
+    ViewBag.Title = "Chi tiết khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="bg-success" style="padding: 10px; border-radius: 5px;">CHI TIẾT KHÁCH HÀNG: @Model.CustomerName</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @* === PHẦN THÔNG TIN TÀI KHOẢN === *@
+
+        <dt>
+            Tên đăng nhập
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+        @* === SỬA LỖI: THÊM MẬT KHẨU (CÓ NÚT ẨN/HIỆN) === *@
+        <dt>
+            Mật khẩu
+        </dt>
+        <dd>
+            @* 1. Dùng <span> để hiển thị ******** *@
+            @* 2. Lưu mật khẩu thật vào "data-password" *@
+            <span id="password-field" data-password="@Model.User.Password">********</span>
+
+            @* 3. Nút "Xem" để gọi JavaScript *@
+            <button type="button" id="toggle-btn" onclick="togglePassword()" class="btn btn-default btn-xs" style="margin-left: 10px; padding: 1px 5px;">
+                Xem
+            </button>
+        </dd>
+        @* === KẾT THÚC SỬA === *@
+
+        <dt>
+            Họ tên
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerAddress)
+        </dd>
+
+        <dt>
+            Vai trò
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserRole)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @* Nút quay lại danh sách *@
+    @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-default" })
+</p>
+
+@* === BƯỚC 4: THÊM JAVASCRIPT ĐỂ ẨN/HIỆN MẬT KHẨU === *@
+@section scripts {
+    <script>
+        function togglePassword() {
+            // 1. Lấy các element
+            var passField = document.getElementById('password-field');
+            var toggleBtn = document.getElementById('toggle-btn');
+
+            // 2. Lấy mật khẩu thật (luôn lấy từ data attribute)
+            var realPassword = passField.getAttribute('data-password');
+
+            // 3. Kiểm tra trạng thái hiện tại
+            if (passField.innerText === '********') {
+                // Đang ẩn -> Hiện
+                passField.innerText = realPassword;
+                toggleBtn.innerText = 'Ẩn';
+            } else {
+                // Đang hiện -> Ẩn
+                passField.innerText = '********';
+                toggleBtn.innerText = 'Xem';
+            }
+        }
+    </script>
+}

@@ -1,5 +1,3 @@
-C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.csproj.AssemblyReference.cache
-C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.csproj.CoreCompileInputs.cache
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\24DH112073_MyStore.dll.config
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\24DH112073_MyStore.dll
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\24DH112073_MyStore.pdb
@@ -82,6 +80,8 @@ C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\Newtonsoft.Json.xml
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\Antlr3.Runtime.pdb
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.csproj.AssemblyReference.cache
+C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.csproj.CoreCompileInputs.cache
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH1120.4A0ED198.Up2Date
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.dll
 C:\Users\TUNG DINH\OneDrive\Documents\Visual Studio 2022\24DH112073_MyStore\24DH112073_MyStore\obj\Debug\24DH112073_MyStore.pdb

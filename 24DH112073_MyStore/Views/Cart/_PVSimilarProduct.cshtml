@@ -1,0 +1,48 @@
+﻿@model _24DH112073_MyStore.Models.ViewModel.Cart
+@using PagedList.Mvc
+
+@* Dùng lại CSS của trang Home *@
+<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
+
+@if (Model.SimilarProducts != null && Model.SimilarProducts.Any())
+{
+    <section class="container-fluid listProduct" style="margin-top: 30px; padding-top: 20px; background-color: #fff; border-top: 1px solid #eee;">
+        <h3 style="text-align: center; margin-bottom: 20px; color: #333;">Sản phẩm tương tự</h3>
+
+        <ul class="list-container">
+            @foreach (var product in Model.SimilarProducts)
+            {
+                <li class="lproduct-item">
+                    @* 1. Sửa tên Action thành ProductDetails (có s) *@
+                    @* 2. Dùng Url.Content cho ảnh *@
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                        <img src="@Url.Content(product.ProductImage)" style="width: 100%; height: 150px; object-fit: contain;" />
+                    </a>
+
+                    <div style="padding: 10px;">
+                        <p class="prodName" style="height: 40px; overflow: hidden;">@product.ProductName</p>
+
+                        @* 3. Sửa định dạng tiền tệ *@
+                        <p class="prodPrice" style="color: blue; font-weight: bold;">
+                            @product.ProductPrice.ToString("#,##0", System.Globalization.CultureInfo.GetCultureInfo("en-US")).Replace(',', '.') ₫
+                        </p>
+
+                        @* Nút thêm nhanh *@
+                        <div style="text-align: center; margin-top: 10px;">
+                            @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+                            {
+                                @Html.Hidden("id", product.ProductID)
+                                @Html.Hidden("quantity", 1)
+                                <button type="submit" class="btn btn-info btn-sm">Thêm vào giỏ</button>
+                            }
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <div class="pagination-container">
+            @Html.PagedListPager(Model.SimilarProducts, page => Url.Action("Index2", new { page }))
+        </div>
+    </section>
+}

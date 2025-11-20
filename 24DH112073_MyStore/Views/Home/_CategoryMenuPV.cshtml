@@ -1,0 +1,18 @@
+﻿@* BƯỚC 1: Nhận danh sách Category từ Controller *@
+@model IEnumerable<_24DH112073_MyStore.Models.Category>
+
+<ul class="navbar-nav flex-grow-1">
+
+    @* BƯỚC 2: THÊM KIỂM TRA "if (Model != null)" ĐỂ FIX LỖI *@
+    @if (Model != null)
+    {
+        @* SỬA LỖI 1: Bỏ dấu @ ở đây *@
+        foreach (var item in Model)
+        {
+            <li class="nav-item">
+                @* SỬA LỖI 2: Xóa chữ 'Check,' ở đây *@
+                @Html.ActionLink(item.CategoryName, "ProductList", "Home", new { id = item.CategoryID }, new { @class = "nav-link" })
+            </li>
+        }
+    }
+</ul>

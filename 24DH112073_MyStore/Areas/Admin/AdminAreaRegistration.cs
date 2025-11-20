@@ -1,24 +1,27 @@
-﻿using System.Web.Mvc;
+﻿
+using System.Web.Mvc;
 
 namespace _24DH112073_MyStore.Areas.Admin
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class AdminAreaRegistration : AreaRegistration
     {
-        public override string AreaName 
+        public override string AreaName
         {
-            get 
+            get
             {
                 return "Admin";
             }
         }
 
-        public override void RegisterArea(AreaRegistrationContext context) 
+        public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Admin_default",
-                "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
-            );
+     "Admin_default",
+     "Admin/{controller}/{action}/{id}",
+     new { action = "Index", id = UrlParameter.Optional },
+     // Thêm Namespaces để chỉ tìm ở thư mục Admin Controller
+     namespaces: new[] { "_24DH112073_MyStore.Areas.Admin.Controllers" }
+                            );
         }
     }
 }
